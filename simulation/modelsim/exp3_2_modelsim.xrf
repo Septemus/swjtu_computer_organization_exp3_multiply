@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, C:/Computer_Organization/exp3_2/exp3_2.v
+source_file = 1, C:/Computer_Organization/exp3_2/db/exp3_2.cbx.xml
+design_name = exp3_2
+instance = comp, \hassetnum~output\, hassetnum~output, exp3_2, 1
+instance = comp, \clk~input\, clk~input, exp3_2, 1
+instance = comp, \hassetnum~reg0feeder\, hassetnum~reg0feeder, exp3_2, 1
+instance = comp, \hassetnum~reg0\, hassetnum~reg0, exp3_2, 1

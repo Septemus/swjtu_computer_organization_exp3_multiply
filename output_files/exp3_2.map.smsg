@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at exp3_2.v(35): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at keymodule.v(13): always construct contains both blocking and non-blocking assignments
