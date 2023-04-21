@@ -4,7 +4,7 @@ entity exp3_2_vlg_check_tst is
     port(
         KEY_C           : in     vl_logic_vector(3 downto 0);
         N               : in     vl_logic_vector(31 downto 0);
-        a               : in     vl_logic_vector(7 downto 0);
+        a               : in     vl_logic_vector(8 downto 0);
         ans             : in     vl_logic_vector(15 downto 0);
         b               : in     vl_logic_vector(7 downto 0);
         c               : in     vl_logic_vector(7 downto 0);

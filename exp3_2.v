@@ -9,7 +9,7 @@
 	 output wire flag3,
 	 output [3:0] KEY_C = 4'b0111,
 	 output reg[15:0]ans,
-	 output reg[7:0] a,
+	 output reg[8:0] a,
 	 output reg[7:0] b,
 	 output reg[7:0] c,
 	 output reg[3:0] cr_reg,
@@ -50,14 +50,14 @@ begin
 	 begin
 			if(cr_reg==4'b1000)
 			begin 
-				ans<={a,c};
+				ans<={a[7:0],c};
 				cr_reg<=cr_reg;
 			end
 			else
 			begin
 				if(c&1)
 				begin
-					a=a+b;
+					a=a+{1'b0,b};
 				end
 				c={a&1,c[7:1]};
 				a=a>>1;

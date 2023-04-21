@@ -54,24 +54,29 @@ begin
 					 8'b0111_1110: num = 5'd14;
 					 8'b1101_1110: num = 5'd15;  
 				  endcase
-			end
-			begin
-				if(num == 5'b1_0000)
-					begin
-						if(count_num == 32'b0)begin
-							count_num = 32'd100001;end
-						count_num = count_num + 1'b1;
-					end
-				else if(count_num > 32'd100000)
-					begin
-						count_num = 32'b1;
-					
-						//移位
-						begin
-						out=out<<4;
+				  begin
+				  out=out<<4;
 						out[3:0] = num[3:0];
+						
 						end
-					end
+			end
+			//begin
+//				if(num == 5'b1_0000)
+//					begin
+//						if(count_num == 32'b0)begin
+//							count_num = 32'd100001;end
+//						count_num = count_num + 1'b1;
+//					end
+//				else if(count_num > 32'd100000)
+//					begin
+//						count_num = 32'b1;
+//					
+//						//移位
+//						begin
+//						out=out<<4;
+//						out[3:0] = num[3:0];
+//						end
+//					end
 	//				if(press_times==3'b100)
 	//				begin
 	//					press_times=3'b000;
@@ -80,7 +85,7 @@ begin
 	//				out=out<<4;
 	//				out[3:0] = num[3:0];
 	//				press_times=press_times+1;
-			end
+			//end
 			end
 		
 end

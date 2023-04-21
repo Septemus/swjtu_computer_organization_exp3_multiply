@@ -21,11 +21,11 @@
 # Loading cycloneiii_ver.cycloneiii_clkctrl
 # Loading cycloneiii_ver.cycloneiii_mux41
 # Loading cycloneiii_ver.cycloneiii_ena_reg
-# Loading cycloneiii_ver.cycloneiii_lcell_comb
 # Loading altera_ver.dffeas
+# Loading cycloneiii_ver.cycloneiii_lcell_comb
 # Loading work.exp3_2_vlg_sample_tst
 # Loading work.exp3_2_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : Waveform15.vwf.vt(1955)
+# ** Note: $finish    : Waveform22.vwf.vt(1975)
 #    Time: 1 us  Iteration: 0  Instance: /exp3_2_vlg_vec_tst/tb_out
