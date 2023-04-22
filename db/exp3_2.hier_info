@@ -1,6 +1,5 @@
 |exp3_2
 clk => clk.IN2
-hassetnum <= hassetnum~reg0.DB_MAX_OUTPUT_PORT_TYPE
 KEY_R[0] => KEY_R[0].IN1
 KEY_R[1] => KEY_R[1].IN1
 KEY_R[2] => KEY_R[2].IN1
@@ -24,7 +23,6 @@ en => ans.OUTPUTSELECT
 en => ans.OUTPUTSELECT
 en => ans.OUTPUTSELECT
 en => ans.OUTPUTSELECT
-en => hassetnum~reg0.DATAIN
 en => cr_reg[0]~reg0.ENA
 en => cr_reg[1]~reg0.ENA
 en => cr_reg[2]~reg0.ENA

@@ -1,6 +1,6 @@
  module exp3_2(
     input clk,
-	 output reg hassetnum,
+//	 output reg hassetnum,
 	 input [3:0] KEY_R,
 	 input clr,
 	 input flag1,
@@ -29,7 +29,7 @@ assign N={X,Y,ans};
 segment_displays sd(.clk(clk),.N(N),.seg(codeout),.sel(sel));
 initial
 begin
-	hassetnum<=1'b0;
+//	hassetnum<=1'b0;
 	cr_reg<=4'b0000;
 end
 always @(posedge clk) 
@@ -38,20 +38,20 @@ begin
 	begin
 	
 	
-	 if(!hassetnum)
+	 if(cr_reg==4'b0000)
 	 begin
 		a<=0;
 		b<=X[7:0];
 		c<=Y[7:0];
-		hassetnum<=1'b1;
-		cr_reg<=4'b0000;
+//		hassetnum<=1'b1;
+		cr_reg<=4'b0001;
 	 end
 	 else
 	 begin
-			if(cr_reg==4'b1000)
+			if(cr_reg==4'b1001)
 			begin 
 				ans<={a[7:0],c};
-				cr_reg<=cr_reg;
+				cr_reg<=4'b0000;
 			end
 			else
 			begin
@@ -66,9 +66,9 @@ begin
 	 end
 	 
 	 end
-	 else
-	 begin
-		hassetnum<=1'b0;
-	 end
+//	 else
+//	 begin
+//		hassetnum<=1'b0;
+//	 end
 end
 endmodule

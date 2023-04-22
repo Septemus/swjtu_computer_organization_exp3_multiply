@@ -1,5 +1,5 @@
 Analysis & Synthesis report for exp3_2
-Sat Apr 22 08:21:48 2023
+Sat Apr 22 14:37:56 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -45,16 +45,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 22 08:21:48 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 22 14:37:56 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; exp3_2                                      ;
 ; Top-level Entity Name              ; exp3_2                                      ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 220                                         ;
-;     Total combinational functions  ; 179                                         ;
-;     Dedicated logic registers      ; 111                                         ;
-; Total registers                    ; 111                                         ;
-; Total pins                         ; 106                                         ;
+; Total logic elements               ; 215                                         ;
+;     Total combinational functions  ; 175                                         ;
+;     Dedicated logic registers      ; 110                                         ;
+; Total registers                    ; 110                                         ;
+; Total pins                         ; 105                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -183,27 +183,27 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 220       ;
+; Estimated Total logic elements              ; 215       ;
 ;                                             ;           ;
-; Total combinational functions               ; 179       ;
+; Total combinational functions               ; 175       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 61        ;
-;     -- 3 input functions                    ; 78        ;
-;     -- <=2 input functions                  ; 40        ;
+;     -- 4 input functions                    ; 64        ;
+;     -- 3 input functions                    ; 70        ;
+;     -- <=2 input functions                  ; 41        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 140       ;
+;     -- normal mode                          ; 136       ;
 ;     -- arithmetic mode                      ; 39        ;
 ;                                             ;           ;
-; Total registers                             ; 111       ;
-;     -- Dedicated logic registers            ; 111       ;
+; Total registers                             ; 110       ;
+;     -- Dedicated logic registers            ; 110       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 106       ;
+; I/O pins                                    ; 105       ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 111       ;
-; Total fan-out                               ; 1079      ;
+; Maximum fan-out                             ; 110       ;
+; Total fan-out                               ; 1063      ;
 ; Average fan-out                             ; 2.15      ;
 +---------------------------------------------+-----------+
 
@@ -213,7 +213,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
-; |exp3_2                    ; 179 (39)          ; 111 (45)     ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |exp3_2                     ; work         ;
+; |exp3_2                    ; 175 (35)          ; 110 (44)     ; 0           ; 0            ; 0       ; 0         ; 105  ; 0            ; |exp3_2                     ; work         ;
 ;    |keymodule:km|          ; 110 (110)         ; 59 (59)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp3_2|keymodule:km        ; work         ;
 ;    |segment_displays:sd|   ; 30 (30)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp3_2|segment_displays:sd ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
@@ -235,12 +235,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 111   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 110   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 2     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 96    ;
+; Number of registers using Clock Enable       ; 101   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -261,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |exp3_2|cr_reg[2]~reg0             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp3_2|cr_reg[2]~reg0             ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |exp3_2|c[3]~reg0                  ;
 ; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |exp3_2|keymodule:km|count_num[26] ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |exp3_2|a[4]~reg0                  ;
@@ -275,7 +275,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -285,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sat Apr 22 08:21:45 2023
+    Info: Processing started: Sat Apr 22 14:37:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp3_2 -c exp3_2
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file exp3_2.v
@@ -315,15 +315,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Computer_Organization/exp3_2/output_files/exp3_2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 331 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 325 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 97 output pins
-    Info (21061): Implemented 225 logic cells
+    Info (21059): Implemented 96 output pins
+    Info (21061): Implemented 220 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4642 megabytes
-    Info: Processing ended: Sat Apr 22 08:21:48 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Sat Apr 22 14:37:56 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
