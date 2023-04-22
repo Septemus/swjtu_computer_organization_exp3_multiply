@@ -1,5 +1,5 @@
 Analysis & Synthesis report for exp3_2
-Thu Apr 20 09:35:16 2023
+Sat Apr 22 08:21:48 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -14,13 +14,12 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,16 +45,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 20 09:35:16 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 22 08:21:48 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; exp3_2                                      ;
 ; Top-level Entity Name              ; exp3_2                                      ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 217                                         ;
-;     Total combinational functions  ; 177                                         ;
-;     Dedicated logic registers      ; 109                                         ;
-; Total registers                    ; 109                                         ;
-; Total pins                         ; 105                                         ;
+; Total logic elements               ; 220                                         ;
+;     Total combinational functions  ; 179                                         ;
+;     Dedicated logic registers      ; 111                                         ;
+; Total registers                    ; 111                                         ;
+; Total pins                         ; 106                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -184,28 +183,28 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 217       ;
+; Estimated Total logic elements              ; 220       ;
 ;                                             ;           ;
-; Total combinational functions               ; 177       ;
+; Total combinational functions               ; 179       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 60        ;
-;     -- 3 input functions                    ; 45        ;
-;     -- <=2 input functions                  ; 72        ;
+;     -- 4 input functions                    ; 61        ;
+;     -- 3 input functions                    ; 78        ;
+;     -- <=2 input functions                  ; 40        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 139       ;
-;     -- arithmetic mode                      ; 38        ;
+;     -- normal mode                          ; 140       ;
+;     -- arithmetic mode                      ; 39        ;
 ;                                             ;           ;
-; Total registers                             ; 109       ;
-;     -- Dedicated logic registers            ; 109       ;
+; Total registers                             ; 111       ;
+;     -- Dedicated logic registers            ; 111       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 105       ;
+; I/O pins                                    ; 106       ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 109       ;
-; Total fan-out                               ; 1030      ;
-; Average fan-out                             ; 2.08      ;
+; Maximum fan-out                             ; 111       ;
+; Total fan-out                               ; 1079      ;
+; Average fan-out                             ; 2.15      ;
 +---------------------------------------------+-----------+
 
 
@@ -214,7 +213,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
-; |exp3_2                    ; 177 (37)          ; 109 (43)     ; 0           ; 0            ; 0       ; 0         ; 105  ; 0            ; |exp3_2                     ; work         ;
+; |exp3_2                    ; 179 (39)          ; 111 (45)     ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |exp3_2                     ; work         ;
 ;    |keymodule:km|          ; 110 (110)         ; 59 (59)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp3_2|keymodule:km        ; work         ;
 ;    |segment_displays:sd|   ; 30 (30)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp3_2|segment_displays:sd ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
@@ -226,20 +225,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; a[7]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; ans[15]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
+; a[8]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
 +---------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+---------------+---------------------------+----------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------+---------------------------+----------------------------------------+
-; a[7]~reg0     ; Stuck at GND              ; ans[15]~reg0                           ;
-;               ; due to stuck port data_in ;                                        ;
-+---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -247,12 +235,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 109   ;
-; Number of registers using Synchronous Clear  ; 7     ;
+; Total registers                              ; 111   ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 2     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 94    ;
+; Number of registers using Clock Enable       ; 96    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -274,10 +262,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |exp3_2|cr_reg[2]~reg0             ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |exp3_2|c[4]~reg0                  ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |exp3_2|keymodule:km|count_num[27] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |exp3_2|a[3]~reg0                  ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |exp3_2|segment_displays:sd|num[0] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |exp3_2|c[3]~reg0                  ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |exp3_2|keymodule:km|count_num[26] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |exp3_2|a[4]~reg0                  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |exp3_2|segment_displays:sd|num[0] ;
 ; 257:1              ; 4 bits    ; 684 LEs       ; 48 LEs               ; 636 LEs                ; No         ; |exp3_2|keymodule:km|num           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
@@ -297,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Thu Apr 20 09:35:13 2023
+    Info: Processing started: Sat Apr 22 08:21:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp3_2 -c exp3_2
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file exp3_2.v
@@ -318,9 +306,7 @@ Info (12128): Elaborating entity "midware" for hierarchy "midware:comb_3"
 Info (12128): Elaborating entity "segment_displays" for hierarchy "segment_displays:sd"
 Warning (10230): Verilog HDL assignment warning at segment_displays.v(9): truncated value with size 32 to match size of target (3)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ans[15]" is stuck at GND
-    Warning (13410): Pin "a[7]" is stuck at GND
-    Warning (13410): Pin "N[15]" is stuck at GND
+    Warning (13410): Pin "a[8]" is stuck at GND
     Warning (13410): Pin "codeout[7]" is stuck at GND
     Warning (13410): Pin "pt[0]" is stuck at GND
     Warning (13410): Pin "pt[1]" is stuck at GND
@@ -329,15 +315,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Computer_Organization/exp3_2/output_files/exp3_2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 327 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 331 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 222 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info (21059): Implemented 97 output pins
+    Info (21061): Implemented 225 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 4642 megabytes
-    Info: Processing ended: Thu Apr 20 09:35:16 2023
+    Info: Processing ended: Sat Apr 22 08:21:48 2023
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+
