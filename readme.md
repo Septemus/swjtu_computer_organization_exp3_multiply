@@ -1,8 +1,8 @@
 > # 0 关于
 
 欢迎到我的博客文章查看更多内容😄：
-https://septemusblog.space/computer_organization_exp3/
-
+[https://septemus.github.io/computer_organization_exp3/
+](https://septemus.github.io/computer_organization_exp3/)
 > # 1 实验内容
 
 用verilog设计一个8位原码一位乘法运算器。乘数和被乘数均为8位原码，被乘数存放在B寄存器中；C寄存器的初始值存放乘数，运算结束后存放乘积的低位部分；A寄存器用于存放部分积，其初始值是0，运算结束后存放乘积的高位部分。A寄存器和C寄存器可级联在一起右移，CR为乘法步数计数器，在每个时钟信号上升沿处理一位乘法的累加和右移，根据乘数的最低位是否为1决定是加被乘数还是0，乘积的符号位由被乘数和乘数的符号位异或得到
